@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.main_container{
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.main_container_wide{
+  max-width: 1330px;
+  margin: 0 auto;
+}
+
+
+@media (max-width : 1300px){
+  .main_container_wide{
+    max-width: 1046px;
+  }
+}
