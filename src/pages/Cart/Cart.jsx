@@ -42,7 +42,7 @@ const CartList = () => {
           <th className="text-gray-400 pb-3 text-sm">SUBTOTAL</th>
         </thead>
         <tbody>
-          {cart?.map((_) => {
+          {cart?.length > 0 ? cart?.map((_) => {
             return (
               <tr className="border-b-2 [&_td]:py-4 [&_td]:px-5" key={_.id}>
                 <td>
@@ -77,7 +77,7 @@ const CartList = () => {
                 <td className="text-gray-500 font-medium">{_.price}</td>
               </tr>
             );
-          })}
+          }) : <tr><td colSpan={6} className="text-center py-2 font-medium text-gray-300">Cart Empty :(</td></tr>}
         </tbody>
       </table>
       <div className="px-10">
