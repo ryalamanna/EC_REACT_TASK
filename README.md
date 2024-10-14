@@ -1,8 +1,38 @@
-# React + Vite
+# Project Title
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### React.js Ecomerce Website
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Recomendation
+
+Node Version 20 or above recomended
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/ryalamanna/EC_REACT_TASK.git
+```
+
+Go to the project directory
+
+```bash
+  cd EC_REACT_TASK
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+## Live Link
+
+[Click Here](https://ec-react-task.vercel.app/) 
