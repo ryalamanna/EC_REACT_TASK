@@ -9,15 +9,15 @@ const Cart = () => {
       <section className="cart_section my-20">
         <div className="main_container">
           <div className="w-[100%] flex items-center ">
-            <h2 className="font-bold text-4xl">
+            <h2 className="font-bold text-4xl px-10 lg:px-0">
               Shopping <span className="text-[#fe7d53]">Cart</span>
             </h2>
           </div>
-          <div className="grid grid-cols-3 mt-14">
-            <div className="col-span-2">
+          <div className="grid grid-cols-1 lg:grid-cols-3 mt-14">
+            <div className="col-span-2 overflow-x-scroll lg:overflow-x-auto">
               <CartList />
             </div>
-            <div className="flex items-center justify-top flex-col flex-wrap">
+            <div className="w-full flex items-center justify-top flex-col flex-wrap">
               <CartDetails />
             </div>
           </div>
@@ -32,10 +32,10 @@ const CartList = () => {
   const { cart, changeQuantity, deleteFromCart } = useProducts();
   return (
     <>
-      <table className="w-full">
+      <table className=" mx-5 lg:mx-0 lg:w-full">
         <thead className="border-b-2">
           <th></th>
-          <th></th>
+          <th width={'20%'}></th>
           <th className="text-gray-400 pb-3 text-sm">PRODUCT</th>
           <th className="text-gray-400 pb-3 text-sm">PRICE</th>
           <th className="text-gray-400 pb-3 text-sm">QUANTITY</th>
@@ -57,7 +57,7 @@ const CartList = () => {
                 </td>
                 <td>
                   <img
-                    className="w-[70px] h-[70px] p-3 border rounded"
+                    className="w-[100px] lg:w-[70px] h-[70px] p-3 border rounded"
                     src={_.image}
                     alt=""
                   />
@@ -80,14 +80,17 @@ const CartList = () => {
           })}
         </tbody>
       </table>
-      <input
-        className="border border-gray-300 rounded my-5 py-4 px-3"
-        type="text"
-        placeholder="Coupon Code"
-      />
-      <button className="bg-[#fe7d53] text-white mx-5 shalow-lg rounded py-4 px-4 shadow-lg font-bold transition hover:-translate-y-1">
-        APPLY COUPON
-      </button>
+      <div className="px-10">
+        <input
+          className="border border-gray-300 rounded my-5 py-4 px-3"
+          type="text"
+          placeholder="Coupon Code"
+        />
+        <button className="bg-[#fe7d53] text-white mx-5 shalow-lg rounded py-4 px-4 shadow-lg font-bold transition hover:-translate-y-1">
+          APPLY COUPON
+        </button>
+      </div>
+      
     </>
   );
 };
@@ -96,7 +99,7 @@ const CartDetails = () => {
   const { cart } = useProducts();
   return (
     <>
-      <div className="w-[80%] bg-gray-700 rounded-lg h-auto py-10 px-6 text-white">
+      <div className="mt-10 lg:mt-0 w-[90%] lg:w-[80%] bg-gray-700 rounded-lg h-auto py-10 px-6 text-white">
         <h4 className="font-semibold text-2xl">Cart Totals</h4>
         <div className="grid grid-cols-2 mt-8 pl-3">
           <p className="font-medium">SUBTOTAL</p>
