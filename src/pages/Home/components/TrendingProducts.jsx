@@ -18,7 +18,7 @@ const TrendingProducts = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo
                 assumenda officiis voluptas velit hic amet sequi atque soluta nihil?
             </p>
-          <div className="flex flex-wrap align-center justify-center mt-10">
+          <div className="flex flex-wrap align-center justify-between mt-10">
             {products?.slice(0, 8).map((_) => {
               return <ProductCard product={_} key={_.id} />;
             })}
