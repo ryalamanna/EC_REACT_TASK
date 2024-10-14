@@ -23,7 +23,7 @@ export function ProductsProvider({ children }) {
     };
 
     const changeQuantity = (id,quantity) => {
-        if(isNaN(quantity)) return;
+        if(isNaN(quantity) || quantity<1) return;
         setCart(prev => {
             return prev.map(_ => {
                 if(_.id == id){
